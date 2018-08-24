@@ -13,19 +13,22 @@
     <link rel="icon" type="image/jpg" href="assets/images/favicon.jpg">
 </head>
 
-<body>
-    <table>
+<body onload="appObj.submitButton();">
+    <table class="table">
         <thead>
             <tr>
                 <th scope="col">
                     <strong>Train Name</strong>
                 </th>
                 <th scope="col">
-                    <strong>Destination</strong></th>
+                    <strong>Destination</strong>
+                </th>
                 <th scope="col">
-                    <strong>Frequency (min)</strong></th>
+                    <strong>Frequency (min)</strong>
+                </th>
                 <th scope="col">
-                    <strong>Next Arrival</strong></th>
+                    <strong>Next Arrival</strong>
+                </th>
                 <th scope="col">
                     <strong>Minutes Away</strong>
                 </th>
@@ -104,6 +107,47 @@
             </tr>
         </tbody>
     </table>
+    <table class="table2">
+
+        <form>
+            <thead>
+                <tr scope="row">
+                    <th>
+                        <label>
+                            <p>Train Name:</p>
+                        </label>
+                    </th>
+                    <th>
+                        <label>
+                            <p>Destination</p>
+                        </label>
+                    </th>
+                    <th>
+                        <label>
+                            <p>Frequency(min)</p>
+                        </label>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+                <tr>
+                    <td>
+                        <input class="trainName">
+                    </td>
+                    <td>
+                        <input class="destination">
+                    </td>
+                    <td>
+                        <input class="frequency">
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </form>
+    </table>
+    <div class="buttonarea"></div>
+    <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>
