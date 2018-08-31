@@ -10,11 +10,33 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 var appObj = {
+  TrainApp: {
+    trainName: "",
+    Destination: "",
+    Frequency: "",
+
+  },
+  createTrain: function (event) {
+    var index = 0;
+    index += 1;
+    firebase.database().ref('users/TrainApp/').update({
+
+
+      trainName: $(".trainName").val(),
+      Destination: $(".destination").val(),
+      Frequency: $(".frequency").val(),
+
+
+
+
+    });
+  },
   submitButton: function (event) {
     var submit = $("<button>");
     submit.addClass("submitbutton");
     submit.text('Submit');
     $(".tbody").append(submit);
+    submit.on("click", appObj.createTrain);
 
   },
   // submitButton()
