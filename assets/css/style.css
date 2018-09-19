@@ -14,7 +14,7 @@ table {
     padding: 5%;
     color: black;
     opacity: .7;
-    
+    overflow: scroll;
 }
 .table-row {
     z-index: 1;
